@@ -1,0 +1,35 @@
+﻿@model Alexandria.Models.Autor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AutorNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutorNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AutorDataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutorDataNascimento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AutorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

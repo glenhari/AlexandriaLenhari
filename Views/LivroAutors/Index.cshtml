@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Alexandria.Models.LivroAutor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2 class="title1">Index</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<div class="grid-bottom widget-shadow">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor.AutorNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Livro.LivroTitulo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autor.AutorNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Livro.LivroTitulo)
+                </td>
+                <td>
+                    @*@Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                    @*@Html.ActionLink("Detalhes", "Details", new {  id=item.LivroId, id2=item.AutorId }) |*@
+                    @Html.ActionLink("Apagar", "Delete", new { id=item.LivroId, id2=item.AutorId })
+                </td>
+            </tr>
+        }
+
+            </table>
+        </div>

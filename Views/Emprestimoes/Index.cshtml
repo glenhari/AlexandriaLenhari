@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Alexandria.Models.Emprestimo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2 class="title1">Index</h2>
+
+<p>
+    @Html.ActionLink("Adicionar", "Create")
+</p>
+<div class="grid-bottom widget-shadow">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Exemplar.ExemplarSerial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario.UsuarioNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmprestimoData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmprestimoEntrega)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Exemplar.ExemplarSerial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.UsuarioNome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmprestimoData)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmprestimoEntrega)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new {  id=item.UsuarioId, id2=item.ExemplarId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id=item.UsuarioId, id2=item.ExemplarId }) |
+                    @Html.ActionLink("Apagar", "Delete", new { id=item.UsuarioId, id2=item.ExemplarId })
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>

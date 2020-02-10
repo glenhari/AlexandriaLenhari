@@ -1,0 +1,35 @@
+﻿@model Alexandria.Models.Exemplar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exemplar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Livro.LivroTitulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Livro.LivroTitulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExemplarSerial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExemplarSerial)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ExemplarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

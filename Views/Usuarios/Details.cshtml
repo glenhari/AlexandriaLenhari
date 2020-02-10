@@ -1,0 +1,67 @@
+﻿@model Alexandria.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioDataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioDataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioEndereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioEndereco)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UsuarioId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

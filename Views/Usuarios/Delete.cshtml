@@ -1,0 +1,73 @@
+﻿@model Alexandria.Models.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioNome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioNome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioCPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioCPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioDataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioDataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioTelefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioTelefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioEndereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsuarioEndereco)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
